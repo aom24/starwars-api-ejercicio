@@ -28,6 +28,7 @@ public class FilmRepositoryTest {
     public void should_print_all_films() {
         List<Film> all = filmRepository.findAll();
         all.stream().forEach(System.out::println);
+        all.forEach(f -> filmRepository.logFilm(f));
     }
 
 
